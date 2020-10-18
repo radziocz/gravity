@@ -4,7 +4,7 @@ exports.home = (req, res) => {
     res.render('form')
 }
 
-exports.run = (req, res, next) => {
+exports.run = (req, res) => {
     res.render('space', {
         "mass_x": req.body.mass_x,
         "mass_y": req.body.mass_y,
@@ -13,8 +13,7 @@ exports.run = (req, res, next) => {
         "x_speed_vector": req.body.x_speed_vector,
         "y_speed_vector": req.body.y_speed_vector
     })
-    return next();
-}
+};
 
 exports.validate = [
     check('mass_x').isNumeric().escape().withMessage('Number is required'),
