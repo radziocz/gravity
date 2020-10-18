@@ -1,64 +1,51 @@
-body {
+/* body {
     width: 800px;
-}
+} */
 
-h2.first {
-    color: orangered;
-    position: relative;
-    left: 300px;
-}
-
-h2.second {
-    color: orangered;
-    position: relative;
-    left: 250px;
-}
-
-h2.third {
-    color: orange;
-    position: relative;
-    left: 350px;
-}
-
-h3 {
-    color: orchid;
-    position: relative;
-    left: 470px;
-}
 div.first {
     color: blue;
-    width: 350px;
-    position: relative;
-    left:100px;
+    margin: auto;
+    width: 60%;
+    text-align: center;
     }
 
 div.second {
     color: green;
-    width: 350px;
+    margin: auto;
+    width: 60%;
+    text-align: center;
     position: relative;
-    left: 750px;
-    bottom: 48px;
+    right: 250px;
+    }
+
+div.third {
+    color: red;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    position: relative;
+    left: 200px;
+    bottom: 125px;
+    }
+
+div.button {
+    color: blue;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    }
+
+div.fourth {
+    color: purple;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    position: relative;
+    bottom: 50px;
 }
 
-input.first {
-    position: relative;
-    left: 20px;
-}
-
-input.second {
-    position: relative;
-    left: 20px;
-}
-
-button {
-    position: relative;
-    left: 500px;
-    width: 100px;
-    height: 40px;
-    background-color: yellow;
-}
-
-#git {
-    position: relative;
-    left: 30px;
+#but {
+    font-size: 20px;
+    background-color: orange;
 }
