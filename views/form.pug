@@ -1,0 +1,42 @@
+doctype html
+
+head
+    title Object movement simulation in a gravitational field.
+    link(rel="stylesheet" type="text/css" href="/style.css")
+
+body
+    h2.first It is a simulation of the behavior of a small object in
+    h2.second space intercepted by the gravitational field of a massive object.
+    h3 Please fill the form below:
+    form(action="/run" method="POST")
+        div.first
+            label(for="mass_x") X coordinate of a massive object
+            br
+            input.first(type="number" name="mass_x" value="800")
+            br
+        div.second
+            label(for="mass_y") Y coordinate of a massive object
+            br
+            input.second(type="number" name="mass_y" value="600")
+            br
+        div.first    
+            label(for="x") The starting X coordinate of the object
+            br
+            input.first(type="number" name="x" value="1200")
+            br
+        div.second
+            label(for="y") The starting Y coordinate of the object
+            br
+            input.second(type="number" name="y" value="300")
+            br
+        div.first
+            label(for="x_speed_vector") X coordinate of the initial velocity vector
+            br
+            input.first(type="number" name="x_speed_vector" value="15")
+            br
+        div.second
+            label(for= "y_speed_vector") Y coordinate of the initial velocity vector
+            br
+            input.second(type="number" name="y_speed_vector" value="-2")
+        button(type="submit") Run
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+html
+    head
+        title Object movement simulation in a gravitational field.
+    body
+        button(onclick="draw()") Start the simulation
+        button(onclick="stop()") Stop the simulation and back to the form
+        p(id="distance")
+        canvas(id="myCanvas" width="2400" height="2000" style="border:1px solid #d3d3d3;")
+        script.
+            function draw(){
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.beginPath();
+            let mass = [#{ mass_x }, #{ mass_y }];
+            let x = #{ x };
+            let y = #{ y };
+            let dist;
+            let v = [#{ x_speed_vector }, #{ y_speed_vector }];
+            let a = [];
+            let sin_a;
+            let len_a;
+            let y_len;
+            let x_len;
+            let tan_a;
+            let j = setInterval(function(){
+                dist = Math.sqrt(Math.pow((mass[0]-x),2)+Math.pow((mass[1]-y),2));
+                document.getElementById("distance").innerHTML = "Distance from the mass: " + dist.toFixed(2);
+                console.log("dist: "+dist);
+                if (dist<=70 ){clearInterval(j)};
+                len_a =100000/Math.pow(dist,2);
+                console.log("len_a:" + len_a)
+                sin_a = (y-mass[1])/dist;
+                y_len = sin_a * len_a;
+                tan_a = (y-mass[1])/(x-mass[0]);
+                x_len = y_len/tan_a;
+                a = [x_len, y_len];
+                ctx.arc(x,y,6,0,2*Math.PI);
+                ctx.arc(mass[0],mass[1],60,0,2*Math.PI);
+                ctx.fill();
+                v= [v[0]-a[0], v[1]-a[1]];
+                x = x+v[0]
+                y = y+v[1]
+                console.log("x,y: "+x, y);
+                },150)
+            };
+            function stop(){
+                window.location="/";
+            }
+            

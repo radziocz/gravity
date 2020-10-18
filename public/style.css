@@ -1,0 +1,53 @@
+body {
+    width: 800px;
+}
+
+h2.first {
+    color: orangered;
+    position: relative;
+    left: 300px;
+}
+
+h2.second {
+    color: orangered;
+    position: relative;
+    left: 250px;
+}
+
+h3 {
+    color: orchid;
+    position: relative;
+    left: 470px;
+}
+div.first {
+    color: blue;
+    width: 350px;
+    position: relative;
+    left:100px;
+    }
+
+div.second {
+    color: green;
+    width: 350px;
+    position: relative;
+    left: 750px;
+    bottom: 48px;
+}
+
+input.first {
+    position: relative;
+    left: 20px;
+}
+
+input.second {
+    position: relative;
+    left: 20px;
+}
+
+button {
+    position: relative;
+    left: 500px;
+    width: 100px;
+    height: 40px;
+    background-color: yellow;
+}
