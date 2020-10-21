@@ -12,7 +12,7 @@ div.first {
 div.second {
     color: green;
     margin: auto;
-    width: 60%;
+    width: 35%;
     text-align: center;
     position: relative;
     right: 250px;
@@ -21,7 +21,7 @@ div.second {
 div.third {
     color: red;
     margin: auto;
-    width: 60%;
+    width: 35%;
     text-align: center;
     position: relative;
     left: 200px;
@@ -45,7 +45,17 @@ div.fourth {
     bottom: 50px;
 }
 
-#but {
+.form {
     font-size: 20px;
     background-color: orange;
+}
+
+.start {
+    font-size: 20px;
+    color: green;
+}
+
+.stop {
+    font-size: 20px;
+    color: red;
 }
